@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "06d4a69d-49c1-4c68-a5c2-fb6655c0bcf8",
+  "alias": "RedirectExtensionCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+
+  "items": {
+    "NEW_ITEM": {
+      "title": { "default": "New Item" },
+      "iconImageUrl": "icons/request.png",
+      "type": "command"
+    },
+    "EDIT_ITEM": {
+      "title": { "default": "Edit Item" },
+      "iconImageUrl": "icons/request.png",
+      "type": "command"
+    },
+    "VIEW_ITEM": {
+      "title": { "default": "View Item" },
+      "iconImageUrl": "icons/request.png",
+      "type": "command"
+    }
+  }
+}

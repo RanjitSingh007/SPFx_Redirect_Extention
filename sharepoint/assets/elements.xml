@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="RedirectExtension"
+        RegistrationId="100"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="06d4a69d-49c1-4c68-a5c2-fb6655c0bcf8"
+        ClientSideComponentProperties="{&quot;redirectPageUrl&quot;:&quot;SitePages/CustomForm.aspx&quot;}">
+    </CustomAction>
+</Elements>

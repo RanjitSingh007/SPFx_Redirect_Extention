@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://{tenantDomain}/sites/{siteName}/Lists/{listName}/AllItems.aspx",
+      "customActions": {
+        "06d4a69d-49c1-4c68-a5c2-fb6655c0bcf8": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "redirectPageUrl": "SitePages/CustomForm.aspx"
+          }
+        }
+      }
+    },
+    "redirectExtension": {
+      "pageUrl": "https://{tenantDomain}/sites/{siteName}/Lists/{listName}/AllItems.aspx",
+      "customActions": {
+        "06d4a69d-49c1-4c68-a5c2-fb6655c0bcf8": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "redirectPageUrl": "SitePages/CustomForm.aspx"
+          }
+        }
+      }
+    }
+  }
+}

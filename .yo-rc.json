@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "spfx-redirect-extension",
+    "useGulp": false,
+    "componentType": "extension",
+    "extensionType": "ListViewCommandSet",
+    "template": "none",
+    "componentName": "RedirectExtension",
+    "componentDescription": "Redirects New, Edit and View buttons to a SharePoint page",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.1",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "spfx-redirect-extension",
+    "libraryId": "d3c1e4c2-fa1c-466c-85ef-26ae4e921d14",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "spfx-redirect-extension description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
