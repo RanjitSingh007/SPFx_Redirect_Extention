@@ -36,3 +36,6 @@ obj
 
 # Styles Generated Code
 *.scss.ts
+
+# Config
+config/serve.json

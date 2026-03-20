@@ -21,6 +21,8 @@
   "devDependencies": {
     "@microsoft/eslint-config-spfx": "1.22.2",
     "@microsoft/eslint-plugin-spfx": "1.22.2",
+    "@microsoft/rush-stack-compiler-4.7": "^0.1.1",
+    "@microsoft/sp-build-web": "^1.22.2",
     "@microsoft/sp-module-interfaces": "1.22.2",
     "@microsoft/spfx-heft-plugins": "1.22.2",
     "@microsoft/spfx-web-build-rig": "1.22.2",

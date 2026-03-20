@@ -14,18 +14,21 @@
   "items": {
     "NEW_ITEM": {
       "title": { "default": "New Item" },
-      "iconImageUrl": "icons/request.png",
-      "type": "command"
+      "iconImageUrl": "./icons/request.png",
+      "type": "command",
+      "sequence": 0
     },
     "EDIT_ITEM": {
       "title": { "default": "Edit Item" },
-      "iconImageUrl": "icons/request.png",
-      "type": "command"
+      "iconImageUrl": "./icons/request.png",
+      "type": "command",
+      "sequence": 1
     },
     "VIEW_ITEM": {
       "title": { "default": "View Item" },
-      "iconImageUrl": "icons/request.png",
-      "type": "command"
+      "iconImageUrl": "./icons/request.png",
+      "type": "command",
+      "sequence": 2
     }
   }
 }

@@ -14,8 +14,14 @@ const LOG_SOURCE: string = 'RedirectExtensionCommandSet';
 
 export default class RedirectExtensionCommandSet extends BaseListViewCommandSet<IRedirectExtensionCommandSetProperties> {
 
+  private _styleElement: HTMLStyleElement | null = null;
+
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, 'Initialized RedirectExtensionCommandSet');
+    console.log('RedirectExtension - Initialized. Properties:', this.properties);
+
+    // Hide the OOB SharePoint "New" / "+ Add new item" button via CSS
+    this._hideDefaultNewButton();
 
     const newCommand: Command = this.tryGetCommand('NEW_ITEM');
     if (newCommand) {
@@ -39,6 +45,9 @@ export default class RedirectExtensionCommandSet extends BaseListViewCommandSet<
 
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
     const redirectPageUrl: string = this.properties.redirectPageUrl;
+
+    Log.info(LOG_SOURCE, `Command executed: ${event.itemId}`);
+    console.log('RedirectExtension - Command executed:', event.itemId, 'Properties:', this.properties);
 
     if (!redirectPageUrl) {
       Log.error(LOG_SOURCE, new Error('redirectPageUrl property is not configured.'));
@@ -79,6 +88,27 @@ export default class RedirectExtensionCommandSet extends BaseListViewCommandSet<
       }
       default:
         throw new Error('Unknown command');
+    }
+  }
+
+  private _hideDefaultNewButton(): void {
+    this._styleElement = document.createElement('style');
+    this._styleElement.textContent = `
+      /* Hide OOB SharePoint "New" button and "+ Add new item" link */
+      button[data-automationid="newCommand"],
+      button[aria-label="New"],
+      .ms-CommandBar-mainArea button[name="New"],
+      .ms-addnew {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(this._styleElement);
+  }
+
+  protected onDispose(): void {
+    if (this._styleElement) {
+      this._styleElement.remove();
+      this._styleElement = null;
     }
   }
 
